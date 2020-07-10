@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  cc_db_service:
+    container_name: cc_db_service
+    restart: always
+    build: ./
+    ports:
+      - "7001:7001"
+    command: gunicorn -b :7001 -w 4 --reload server:app
+
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "8081:8081"
+    depends_on:
+      - cc_db_service
+
+######################################
+# Here is the Multi-Container Setup  #
+# NGINX ==> GUNICORN ==> FLASK_APP   #
+######################################

@@ -1,22 +1,31 @@
-# flask_api_mvc
+# ML Service
 
-Steps to add new Resource
 
-Models
+***NGNIX** ==> **GUNICORN** ==> **FLASK***
 
-Controllers
 
-App
+-----------------------
 
-1.
-# inside initialize_extensions
-from app.models import NewModel
+**Deployment**
 
-2.
-# inside register_blueprints
-from app.controllers import new_controller
+* Checkout code
 
-Run application:
+   ```
+   git clone git@eng-gitlab.juniper.net:lary/lary-ml.git
+   cd lary-ml
 
-export FLASK_APP=main.py
-flask run
+   ```
+
+* Run Docker Compose to Build the apps.
+
+  ```
+   docker-compose up
+  ```
+
+OR
+
+* Just run star_app.sh, This will clean up the current running containers and build a fresh images and containers
+
+  ```
+    ./start_app.sh
+  ```

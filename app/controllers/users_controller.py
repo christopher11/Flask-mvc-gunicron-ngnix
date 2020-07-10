@@ -4,7 +4,6 @@ from flask import request, jsonify, render_template
 from app.models.user import User
 from app.models.rating import Rating
 
-from app import mongo
 from app.jobs.user_job import new_task
 import app.helpers.user_service as us
 
@@ -31,4 +30,3 @@ def ratings():
 #@user_blueprints.route('/home')
 def home():
     return render_template('index.html')
-
