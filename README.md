@@ -1,4 +1,4 @@
-# ML Service
+# Flask Service
 
 
 ***NGNIX** ==> **GUNICORN** ==> **FLASK***
