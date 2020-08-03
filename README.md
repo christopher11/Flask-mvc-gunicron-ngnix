@@ -11,7 +11,7 @@
 * Checkout code
 
    ```
-   git clone git@eng-gitlab.juniper.net:lary/lary-ml.git
+   git clone lary-ml.git
    cd lary-ml
 
    ```
